@@ -55,12 +55,11 @@
       <a href="#vitality" class="nav__link">Vitality</a>
       <a href="#what-it-is" class="nav__link">What It Is</a>
       <a href="#for-patients" class="nav__link">For Patients</a>
-      <a href="#for-providers" class="nav__link">For Providers</a>
+      <a href="#for-providers" class="nav__link">Care Team</a>
+      <a href="#optimization" class="nav__link">Optimization</a>
       <a href="#security" class="nav__link">Security</a>
       <a href="#contact" class="nav__link">Contact</a>
-      <a href="https://app.healthv.ai/login" class="nav__link nav__link--login">Login</a>
     </nav>
-    <a href="https://app.healthv.ai/login" class="btn-primary btn-login">Login</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -74,49 +73,56 @@
     <div class="hero__content">
       <h1 class="hero__headline fade-in">Your health data has answers.<br>Ask them.</h1>
       <p class="hero__sub fade-in" style="transition-delay:0.2s">HealthV connects your medical records, wearables, genetics, and more into one AI health advisor you can talk to anytime.</p>
-      <form class="waitlist-form fade-in" style="transition-delay:0.4s" id="hero-form">
-        <input type="email" class="waitlist-form__input" placeholder="Enter your email" required aria-label="Email address">
-        <button type="submit" class="btn-primary">Join Waitlist</button>
-      </form>
-      <div class="form-success" id="hero-success">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Thank you &mdash; we&rsquo;ll be in touch.
+      <div class="fade-in" style="transition-delay:0.4s">
+        <a href="https://app.healthv.ai" class="btn-primary" style="display:inline-block; text-decoration:none; font-size:1.1rem; padding:0.9rem 2.5rem;">Launch App</a>
       </div>
     </div>
 
     <!-- Data Source Cards (static grid) -->
     <div class="hero-tiles fade-in" style="transition-delay:0.5s" id="hero-tiles">
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/medical-records.png" alt="Medical Records" loading="lazy">
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 12h4"/><path d="M10 16h4"/><path d="M10 8h1"/></svg>
         <span class="hero-card__label">Medical Records</span>
       </div>
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/genetics.png" alt="Genetics" loading="lazy">
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m17 6-2.5-2.5"/><path d="m14 8-1-1"/><path d="m7 18 2.5 2.5"/><path d="m3.5 14.5.5.5"/><path d="m20 9 .5.5"/><path d="m6.5 12.5 1 1"/><path d="m16.5 10.5 1 1"/><path d="m10 16 1.5 1.5"/></svg>
         <span class="hero-card__label">Genetics</span>
       </div>
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/wearables.png" alt="Wearables" loading="lazy">
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="5" y="5" rx="2"/><path d="M9 1v4"/><path d="M15 1v4"/><path d="M9 19v4"/><path d="M15 19v4"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
         <span class="hero-card__label">Wearables</span>
       </div>
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/lab-results.png" alt="Lab Results" loading="lazy">
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16.5h10"/></svg>
         <span class="hero-card__label">Lab Results</span>
       </div>
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/microbiome.png" alt="Gut Microbiome" loading="lazy">
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
         <span class="hero-card__label">Gut Microbiome</span>
       </div>
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/medications.png" alt="Medications" loading="lazy">
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
         <span class="hero-card__label">Medications</span>
       </div>
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/ai-advisor.png" alt="24/7 AI Advisor" loading="lazy">
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
         <span class="hero-card__label">24/7 AI Advisor</span>
       </div>
       <div class="hero-card">
-        <img class="hero-card__icon" src="./images/icons/health-trends.png" alt="Health Trends" loading="lazy">
-        <span class="hero-card__label">Health Trends</span>
+        <svg class="hero-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span class="hero-card__label">Care Team</span>
+      </div>
+      <div class="health-compat" style="grid-column: 1 / -1; margin-top: var(--space-sm);">
+        <div class="health-compat__inline" style="justify-content: center;">
+          <span class="health-compat__text">Connect with</span>
+          <svg class="health-compat__glogo" width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
+            <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
+            <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
+            <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
+          </svg>
+          <span class="health-compat__text">Google Health Connect</span>
+        </div>
       </div>
     </div>
   </div>
@@ -135,176 +141,58 @@
 
     <div class="vitality-grid">
       <div class="vitality-card reveal">
-        <img src="./images/icons/body-strength.png" alt="" class="vitality-card__icon" width="48" height="48">
+        <svg width="48" height="48" class="vitality-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         <h3 class="vitality-card__title">Body</h3>
         <p class="vitality-card__desc">Cardiovascular fitness, strength, metabolic efficiency, hormone balance, recovery capacity. Your body is a system — vitality means every part of that system is performing at its best.</p>
       </div>
 
       <div class="vitality-card reveal">
-        <img src="./images/icons/brain-mind.png" alt="" class="vitality-card__icon" width="48" height="48">
+        <svg width="48" height="48" class="vitality-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
         <h3 class="vitality-card__title">Mind</h3>
         <p class="vitality-card__desc">Cognitive sharpness, emotional resilience, stress regulation, sleep quality. Mental vitality isn't just the absence of illness — it's the presence of clarity, focus, and psychological endurance.</p>
       </div>
 
       <div class="vitality-card reveal">
-        <img src="./images/icons/realtime-data.png" alt="" class="vitality-card__icon" width="48" height="48">
+        <svg width="48" height="48" class="vitality-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         <h3 class="vitality-card__title">Real-Time Data</h3>
         <p class="vitality-card__desc">Wearables, continuous glucose monitors, sleep trackers, HRV sensors — modern technology generates a constant stream of biometric signals. HealthV turns that raw data into a living picture of your vitality.</p>
       </div>
 
       <div class="vitality-card reveal">
-        <img src="./images/icons/vitality-energy.png" alt="" class="vitality-card__icon" width="48" height="48">
+        <svg width="48" height="48" class="vitality-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         <h3 class="vitality-card__title">Optimization</h3>
         <p class="vitality-card__desc">Vitality isn't static. It's something you build, track, and improve. HealthV connects your biological data to AI-driven insights so you can make decisions that compound — not just survive, but thrive.</p>
       </div>
     </div>
 
-    <div class="vitality-statement reveal">
-      <p class="vitality-statement__text">Health is binary — you're sick or you're not. <strong>Vitality is a spectrum.</strong> HealthV measures where you are, shows you where you could be, and gives you the intelligence to close the gap.</p>
-    </div>
   </div>
 </section>
 
 <!-- SECTION 1: WHAT IT IS -->
 <section class="section section--what" id="what-it-is">
   <div class="container" style="position:relative; z-index:1;">
-    <h2 class="section__title reveal">One Platform.<br>Complete Health Sovereignty.</h2>
+    <h2 class="section__title reveal">One Platform.<br>All Your Health Data in One Place.</h2>
     <div class="what-it-is__body">
       <p class="what-it-is__text reveal">HealthV.ai is a patient-centered health data platform that aggregates your medical records, labs, wearables, genetics, and more into a single intelligent dashboard — owned and controlled by you, not your insurance company, not your hospital, not a tech giant.</p>
       <p class="what-it-is__text reveal">HealthV connects patients to their providers through a secure, HIPAA-compliant, AI-powered platform that travels with you no matter where you receive care.</p>
     </div>
 
-    <!-- Three Pillars -->
-    <div class="pillars">
-      <div class="pillar reveal">
-        <h3 class="pillar__title">Patient Data Sovereignty</h3>
-        <p class="pillar__desc">You own your data. You decide who sees it.</p>
-      </div>
-      <div class="pillar reveal">
-        <h3 class="pillar__title">AI-Powered Insights</h3>
-        <p class="pillar__desc">24/7 intelligent advisor that knows YOUR data, not generic advice.</p>
-      </div>
-      <div class="pillar reveal">
-        <h3 class="pillar__title">Practice Connectivity</h3>
-        <p class="pillar__desc">Seamless communication between patients and their care team.</p>
-      </div>
-    </div>
+</div>
+</section>
 
-    <!-- Flow Diagram — Large & Dynamic -->
-    <div class="flow-v2 reveal" id="flow-diagram">
-      <div class="flow-v2__sources" id="flow-sources">
-        <div class="flow-v2__source"><img src="./images/icons/medical-records.png" alt="" width="28" height="28"><span>Medical Records</span></div>
-        <div class="flow-v2__source"><img src="./images/icons/genetics.png" alt="" width="28" height="28"><span>Genetics</span></div>
-        <div class="flow-v2__source"><img src="./images/icons/wearables.png" alt="" width="28" height="28"><span>Wearables</span></div>
-        <div class="flow-v2__source"><img src="./images/icons/lab-results.png" alt="" width="28" height="28"><span>Lab Results</span></div>
-        <div class="flow-v2__source"><img src="./images/icons/microbiome.png" alt="" width="28" height="28"><span>Gut Microbiome</span></div>
-        <div class="flow-v2__source"><img src="./images/icons/medications.png" alt="" width="28" height="28"><span>Medications</span></div>
-      </div>
 
-      <div class="flow-v2__connector">
-        <div class="flow-v2__line-bundle">
-          <div class="flow-v2__anim-line"></div>
-          <div class="flow-v2__anim-line"></div>
-          <div class="flow-v2__anim-line"></div>
-          <div class="flow-v2__anim-line"></div>
-          <div class="flow-v2__anim-line"></div>
-        </div>
-      </div>
-
-      <div class="flow-v2__center">
-        <div class="flow-v2__node">
-          <div class="flow-v2__node-pulse"></div>
-          <div class="flow-v2__node-ring"></div>
-          <div class="flow-v2__node-inner">
-            <svg class="flow-v2__node-logo" viewBox="0 0 40 40" fill="none">
-              <path d="M12 8v24M12 8l8 12-8 12M28 8v24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="flow-v2__node-title">HealthV AI</span>
-            <span class="flow-v2__node-sub">Processing</span>
-          </div>
-        </div>
-        <div class="flow-v2__node-particles" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <div class="flow-v2__connector">
-        <div class="flow-v2__line-bundle">
-          <div class="flow-v2__anim-line"></div>
-          <div class="flow-v2__anim-line"></div>
-          <div class="flow-v2__anim-line"></div>
-        </div>
-      </div>
-
-      <div class="flow-v2__output">
-        <div class="flow-v2__twin">
-          <div class="twin-dashboard">
-            <div class="twin-dashboard__header">
-              <div class="twin-dashboard__avatar">
-                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
-              </div>
-              <div>
-                <div class="twin-dashboard__title"></div>
-                <div class="twin-dashboard__sub">Personalized Health Model</div>
-              </div>
-            </div>
-
-            <div class="twin-metrics">
-              <div class="twin-metric">
-                <span class="twin-metric__label">HRV</span>
-                <div class="twin-metric__bar"><div class="twin-metric__fill twin-metric__fill--hrv"></div></div>
-                <span class="twin-metric__value">48ms</span>
-              </div>
-              <div class="twin-metric">
-                <span class="twin-metric__label">Sleep</span>
-                <div class="twin-metric__bar"><div class="twin-metric__fill twin-metric__fill--sleep"></div></div>
-                <span class="twin-metric__value">7.2h</span>
-              </div>
-              <div class="twin-metric">
-                <span class="twin-metric__label">Labs</span>
-                <div class="twin-metric__bar"><div class="twin-metric__fill twin-metric__fill--labs"></div></div>
-                <span class="twin-metric__value">Normal</span>
-              </div>
-              <div class="twin-metric">
-                <span class="twin-metric__label">Stress</span>
-                <div class="twin-metric__bar"><div class="twin-metric__fill twin-metric__fill--stress"></div></div>
-                <span class="twin-metric__value">Low</span>
-              </div>
-              <div class="twin-metric">
-                <span class="twin-metric__label">Recovery</span>
-                <div class="twin-metric__bar"><div class="twin-metric__fill twin-metric__fill--recovery"></div></div>
-                <span class="twin-metric__value">82%</span>
-              </div>
-            </div>
-
-            <div class="twin-heartbeat">
-              <svg viewBox="0 0 240 36" preserveAspectRatio="none">
-                <polyline class="twin-heartbeat__line" points="0,18 24,18 36,18 42,6 48,30 54,12 60,24 66,18 96,18 120,18 132,18 138,6 144,30 150,12 156,24 162,18 192,18 216,18 222,10 228,26 234,18 240,18"/>
-              </svg>
-            </div>
-
-            <div class="twin-dashboard__footer">
-              <div class="twin-dashboard__status"></div>
-              <span class="twin-dashboard__status-text">Live Sync</span>
-            </div>
-          </div>
-
-          <span class="flow-v2__twin-label"></span>
-        </div>
-      </div>
-    </div>
-
+<!-- HOW HEALTHV WORKS -->
+<section class="section section--how-it-works" id="how-it-works">
+  <div class="how-it-works-graphic reveal">
+    <img src="./images/how-healthv-works.jpg" alt="How HealthV Works" class="how-it-works-img" loading="lazy">
   </div>
 </section>
 
 <!-- SECTION 2: FOR PATIENTS -->
 <section class="section section--patients" id="for-patients">
   <div class="container">
-    <h2 class="section__title reveal">Your Health. In Your Hands.</h2>
-    <p class="section__subtitle reveal">An AI that actually knows you.</p>
+    <h2 class="section__title reveal">Smarter Answers. Personal Context. Always On.</h2>
+    <p class="section__subtitle reveal">This isn't a generic health chatbot. HealthV knows your complete health picture before you ask your first question.</p>
 
     <div class="two-col">
       <!-- LEFT: Phone Mockup -->
@@ -321,10 +209,8 @@
               <div class="phone-msg phone-msg--ai" data-delay="1200">Your HRV dropped 22% this week and your sleep average is 5.1 hours — down from your baseline of 7.2. Your last thyroid panel was normal. This looks like sleep debt not a clinical issue. Want me to flag this for your provider in tomorrow's morning digest?</div>
               <div class="phone-msg phone-msg--user" data-delay="3000">What about my hormones?</div>
               <div class="phone-msg phone-msg--ai" data-delay="4200">Your last testosterone was in the lower third of normal for your age and your estradiol hasn't been checked in 8 months. Worth revisiting. I can add this to your next provider message.</div>
-              <div class="phone-msg phone-msg--user" data-delay="5400">Yes, flag it. Also, is my vitamin D still low?</div>
-              <div class="phone-msg phone-msg--ai" data-delay="6600">Flagged for Dr. Patel. Your vitamin D was 28 ng/mL last check — borderline low. With your current supplementation of 2000 IU daily, I'd recommend rechecking in 6 weeks. Want me to set a reminder?</div>
-              <div class="phone-msg phone-msg--user" data-delay="7800">Yes, and show me my sleep trends this month</div>
-              <div class="phone-msg phone-msg--ai" data-delay="9000">Your average this month is 5.8h vs. your 3-month baseline of 7.1h. Deep sleep is down 34%. Your Oura data shows most disruptions between 2–4 AM. This correlates with the cortisol spike noted in your last labs.</div>
+              <div class="phone-msg phone-msg--user" data-delay="5400">Is my vitamin D still low?</div>
+              <div class="phone-msg phone-msg--ai" data-delay="6600">Your vitamin D was 28 ng/mL last check — borderline low. With 2000 IU daily, I’d recommend rechecking in 6 weeks. Want me to set a reminder and flag this for your care team?</div>
             </div>
           </div>
         </div>
@@ -332,47 +218,45 @@
 
       <!-- RIGHT: Bullet Info -->
       <div class="info-block reveal">
-        <h3 class="info-block__title">Smarter answers. Personal context. Always on.</h3>
-        <p class="info-block__subtitle">This isn't a generic health chatbot. HealthV knows your complete health picture before you ask your first question.</p>
 
         <div class="feature-list">
           <div class="feature-item">
-            <img src="./images/icons/chat.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             <div>
               <h4 class="feature-item__title">Context-Driven Conversations</h4>
               <p class="feature-item__desc">Every answer is based on YOUR labs, YOUR wearables, YOUR history — not generic internet advice.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/health-trends.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             <div>
               <h4 class="feature-item__title">Knows Your Baseline</h4>
               <p class="feature-item__desc">HealthV tracks your personal health trends over time. It knows what's normal for YOU, not just what's normal on a reference range.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/connectivity.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v4"/><path d="m9.5 14.5-3 3"/><path d="m14.5 14.5 3 3"/></svg>
             <div>
               <h4 class="feature-item__title">Connected to Your Provider</h4>
               <p class="feature-item__desc">Important findings get flagged directly to your care team. No more wondering if something is serious enough to call.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/wearables.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="5" y="5" rx="2"/><path d="M9 1v4"/><path d="M15 1v4"/><path d="M9 19v4"/><path d="M15 19v4"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
             <div>
               <h4 class="feature-item__title">Wearables Integrated</h4>
-              <p class="feature-item__desc">Your Apple Watch, Oura Ring, CGM, and more feed directly into HealthV. Your AI advisor sees your real-time data, not just your annual labs.</p>
+              <p class="feature-item__desc">Connected through Apple Health and Google Health Connect. Your Apple Watch, Oura Ring, CGM, and more feed directly into HealthV — your AI advisor sees your real-time data, not just your annual labs.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/genetics.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m17 6-2.5-2.5"/><path d="m14 8-1-1"/><path d="m7 18 2.5 2.5"/><path d="m3.5 14.5.5.5"/><path d="m20 9 .5.5"/><path d="m6.5 12.5 1 1"/><path d="m16.5 10.5 1 1"/><path d="m10 16 1.5 1.5"/></svg>
             <div>
               <h4 class="feature-item__title">Genetics + History Aware</h4>
               <p class="feature-item__desc">Family history of heart disease? BRCA variant? HealthV factors in your genetic context with every answer.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/clock.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <div>
               <h4 class="feature-item__title">Available 24/7</h4>
               <p class="feature-item__desc">Ask at 2am. Ask from another country. Ask during your commute. HealthV is always available, always informed.</p>
@@ -380,7 +264,7 @@
           </div>
         </div>
 
-        <a href="#contact" class="btn-primary">Join Waitlist</a>
+        <a href="https://app.healthv.ai" class="btn-primary" style="text-decoration:none;">Launch App</a>
       </div>
     </div>
   </div>
@@ -389,18 +273,18 @@
 <!-- SECTION 3: FOR PROVIDERS -->
 <section class="section section--providers" id="for-providers">
   <div class="container" style="position:relative; z-index:1;">
-    <h2 class="section__title reveal">Your Patients. Always Connected.</h2>
-    <p class="section__subtitle reveal">Replace your answering service with something actually intelligent.</p>
+    <h2 class="section__title reveal">One Patient. Many Providers. Zero Gaps.</h2>
+    <p class="section__subtitle reveal">Your PCP, specialists, therapists, nutritionists, and trainers all contribute to your health. HealthV makes sure they can actually see each other&#39;s work.</p>
 
     <div class="two-col">
-      <!-- LEFT: Desktop Dashboard Mockup -->
+      <!-- LEFT: Care Team Visual -->
       <div class="desktop-mockup reveal">
         <div class="desktop-frame">
           <div class="desktop-bar">
             <div class="desktop-bar__dots">
               <span></span><span></span><span></span>
             </div>
-            <div class="desktop-bar__url">healthv.ai/provider-dashboard</div>
+            <div class="desktop-bar__url">healthv.ai/care-team</div>
           </div>
           <div class="desktop-screen">
             <!-- Top Row -->
@@ -413,151 +297,213 @@
                 </div>
               </div>
               <div class="dash-card">
-                <div class="dash-label">Last Visit</div>
-                <div class="dash-value">Feb 12, 2026</div>
+                <div class="dash-label">Care Team</div>
+                <div class="dash-value">5 providers</div>
               </div>
               <div class="dash-card">
-                <div class="dash-label">Risk Score</div>
-                <div class="dash-value dash-value--risk"><span class="dash-risk dash-risk--medium"></span>Moderate</div>
+                <div class="dash-label">Last Synced</div>
+                <div class="dash-value">Today</div>
               </div>
               <div class="dash-card">
-                <div class="dash-label">Active Meds</div>
-                <div class="dash-value">4</div>
+                <div class="dash-label">Shared Records</div>
+                <div class="dash-value">12</div>
               </div>
             </div>
             <!-- Middle Row -->
             <div class="dash-row dash-row--mid">
               <div class="dash-panel dash-panel--chart">
-                <div class="dash-panel__title">Lab Trends — 12 mo</div>
-                <div class="dash-chart" id="dash-chart">
-                  <svg viewBox="0 0 300 100" preserveAspectRatio="none">
-                    <polyline points="0,70 50,65 100,55 150,60 200,45 250,40 300,35" fill="none" stroke="#0891B2" stroke-width="2"/>
-                    <polyline points="0,80 50,75 100,78 150,70 200,68 250,60 300,55" fill="none" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4 2"/>
-                    <polyline points="0,50 50,55 100,52 150,48 200,50 250,42 300,38" fill="none" stroke="#10B981" stroke-width="2" opacity="0.7"/>
-                  </svg>
-                  <div class="dash-chart__legend">
-                    <span><i style="background:#0891B2"></i>TSH</span>
-                    <span><i style="background:#7C3AED"></i>HbA1c</span>
-                    <span><i style="background:#10B981"></i>Lipids</span>
-                  </div>
+                <div class="dash-panel__title">Care Team Members</div>
+                <div class="dash-digest">
+                  <div class="dash-digest__item"><span class="dash-dot dash-dot--green"></span>Dr. Sarah Chen — Primary Care</div>
+                                    <div class="dash-digest__item"><span class="dash-dot dash-dot--green"></span>Dr. Maria Lopez — Endocrinology</div>
+                  <div class="dash-digest__item"><span class="dash-dot dash-dot--green"></span>Emily Ross, PT — Physical Therapy</div>
+                  <div class="dash-digest__item"><span class="dash-dot dash-dot--green"></span>James Wu, RD — Nutrition</div>
                 </div>
               </div>
               <div class="dash-panel">
-                <div class="dash-panel__title">HRV &amp; Sleep</div>
+                <div class="dash-panel__title">Recent Activity</div>
                 <div class="dash-mini-stats">
-                  <div class="dash-mini"><span class="dash-mini__label">Avg HRV</span><span class="dash-mini__value">48ms</span></div>
-                  <div class="dash-mini"><span class="dash-mini__label">Sleep</span><span class="dash-mini__value">6.8h</span></div>
-                  <div class="dash-mini"><span class="dash-mini__label">Trend</span><span class="dash-mini__value dash-mini__value--up">↑ +5%</span></div>
+                  <div class="dash-mini"><span class="dash-mini__label">New Labs</span><span class="dash-mini__value">3</span></div>
+                  <div class="dash-mini"><span class="dash-mini__label">Notes</span><span class="dash-mini__value">7</span></div>
+                  <div class="dash-mini"><span class="dash-mini__label">Updates</span><span class="dash-mini__value dash-mini__value--up">Today</span></div>
                 </div>
-                <div class="dash-panel__title" style="margin-top:12px">Next Screening</div>
-                <div class="dash-mini"><span class="dash-mini__label">Lipid Panel</span><span class="dash-mini__value">Mar 2026</span></div>
-              </div>
-            </div>
-            <!-- Bottom Row -->
-            <div class="dash-row dash-row--bottom">
-              <div class="dash-panel dash-panel--digest">
-                <div class="dash-panel__title">Morning Digest</div>
-                <div class="dash-digest">
-                  <div class="dash-digest__stat">3 messages overnight — <strong>0 urgent</strong>, 3 routine</div>
-                  <div class="dash-digest__item"><span class="dash-dot dash-dot--green"></span>Sleep question — auto-responded</div>
-                  <div class="dash-digest__item"><span class="dash-dot dash-dot--green"></span>Med refill request — queued</div>
-                  <div class="dash-digest__item"><span class="dash-dot dash-dot--green"></span>Lab result question — drafted</div>
-                </div>
-              </div>
-              <div class="dash-panel dash-panel--actions">
-                <div class="dash-panel__title">Quick Actions</div>
-                <button class="dash-action">Review Messages</button>
-                <button class="dash-action">Approve Responses</button>
-                <button class="dash-action">View Full Dashboard</button>
               </div>
             </div>
             <!-- Alerts Row -->
             <div class="dash-row dash-row--alerts">
               <div class="dash-panel dash-panel--alerts-panel">
-                <div class="dash-panel__title">Recent Alerts</div>
+                <div class="dash-panel__title">Cross-Provider Updates</div>
                 <div class="dash-alert-list">
-                  <div class="dash-alert-item dash-alert-item--yellow"><span class="dash-alert-dot dash-alert-dot--yellow"></span><div><div class="dash-alert-name">Sarah K.</div><div class="dash-alert-detail">Blood pressure reading 148/92 — trending up 3 days</div></div><span class="dash-alert-time">2h ago</span></div>
-                  <div class="dash-alert-item dash-alert-item--green"><span class="dash-alert-dot dash-alert-dot--green"></span><div><div class="dash-alert-name">Michael R.</div><div class="dash-alert-detail">Lab results normal — auto-notified patient</div></div><span class="dash-alert-time">4h ago</span></div>
-                  <div class="dash-alert-item dash-alert-item--blue"><span class="dash-alert-dot dash-alert-dot--blue"></span><div><div class="dash-alert-name">Lisa T.</div><div class="dash-alert-detail">Requested medication refill — awaiting approval</div></div><span class="dash-alert-time">5h ago</span></div>
+                  <div class="dash-alert-item dash-alert-item--blue"><span class="dash-alert-dot dash-alert-dot--blue"></span><div><div class="dash-alert-name">Dr. Chen</div><div class="dash-alert-detail">Annual physical notes uploaded — shared with care team</div></div><span class="dash-alert-time">2h ago</span></div>
+                  <div class="dash-alert-item dash-alert-item--green"><span class="dash-alert-dot dash-alert-dot--green"></span><div><div class="dash-alert-name">Emily Ross, PT</div><div class="dash-alert-detail">Recovery plan uploaded — visible to full team</div></div><span class="dash-alert-time">1d ago</span></div>
+                  <div class="dash-alert-item dash-alert-item--blue"><span class="dash-alert-dot dash-alert-dot--blue"></span><div><div class="dash-alert-name">Dr. Lopez</div><div class="dash-alert-detail">A1C results reviewed — adjusted treatment plan</div></div><span class="dash-alert-time">2d ago</span></div>
                 </div>
               </div>
             </div>
-            <!-- Patient Queue Row -->
-            <div class="dash-row dash-row--queue">
-              <div class="dash-panel dash-panel--queue-panel">
-                <div class="dash-panel__title">Today's Patient Queue</div>
-                <div class="dash-queue">
-                  <div class="dash-queue-header">
-                    <span>Patient</span><span>Status</span><span>Priority</span><span>Time</span>
-                  </div>
-                  <div class="dash-queue-row">
-                    <span>James M.</span><span class="dash-status dash-status--active">In Review</span><span class="dash-priority dash-priority--medium">Medium</span><span>9:00 AM</span>
-                  </div>
-                  <div class="dash-queue-row">
-                    <span>Sarah K.</span><span class="dash-status dash-status--pending">Pending</span><span class="dash-priority dash-priority--high">High</span><span>9:30 AM</span>
-                  </div>
-                  <div class="dash-queue-row">
-                    <span>David L.</span><span class="dash-status dash-status--done">Completed</span><span class="dash-priority dash-priority--low">Low</span><span>8:15 AM</span>
+            <!-- Vitals Chart Row -->
+            <div class="dash-row dash-row--mid">
+              <div class="dash-panel dash-panel--chart">
+                <div class="dash-panel__title">Vitals — 30 Day Trend</div>
+                <div class="dash-chart">
+                  <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                    <polyline points="0,65 30,60 60,58 90,55 120,52 150,50 180,48 210,45 240,42 270,40 300,38" fill="none" stroke="#0891B2" stroke-width="2"/>
+                    <polyline points="0,75 30,72 60,74 90,70 120,68 150,65 180,62 210,60 240,58 270,55 300,52" fill="none" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4 2"/>
+                    <polyline points="0,45 30,48 60,44 90,42 120,40 150,38 180,36 210,35 240,33 270,30 300,28" fill="none" stroke="#10B981" stroke-width="2" opacity="0.7"/>
+                  </svg>
+                  <div class="dash-chart__legend">
+                    <span><i style="background:#0891B2"></i>Resting HR</span>
+                    <span><i style="background:#7C3AED"></i>BP Systolic</span>
+                    <span><i style="background:#10B981"></i>HRV</span>
                   </div>
                 </div>
+              </div>
+              <div class="dash-panel">
+                <div class="dash-panel__title">Shared Documents</div>
+                <div class="dash-mini-stats">
+                  <div class="dash-mini"><span class="dash-mini__label">Lab Reports</span><span class="dash-mini__value">8</span></div>
+                  <div class="dash-mini"><span class="dash-mini__label">Imaging</span><span class="dash-mini__value">3</span></div>
+                  <div class="dash-mini"><span class="dash-mini__label">Visit Notes</span><span class="dash-mini__value">12</span></div>
+                </div>
+                <div class="dash-panel__title" style="margin-top:12px">Upcoming</div>
+                <div class="dash-mini"><span class="dash-mini__label">Dr. Chen — Annual</span><span class="dash-mini__value">Apr 2</span></div>
+                <div class="dash-mini"><span class="dash-mini__label">James Wu — Follow-up</span><span class="dash-mini__value">Apr 8</span></div>
               </div>
             </div>
           </div>
         </div>
-        <p class="mockup-caption">Everything you need to know. Ready before your first patient.</p>
+        <p class="mockup-caption">Every provider on the same page. Every record in one place.</p>
       </div>
 
       <!-- RIGHT: Bullet Info -->
       <div class="info-block reveal">
-        <h3 class="info-block__title">Intelligent. Automated. Always working while you sleep.</h3>
-        <p class="info-block__subtitle">HealthV doesn't just store patient data — it actively manages patient communication so you can focus on care, not phone calls.</p>
 
         <div class="feature-list">
           <div class="feature-item">
-            <img src="./images/icons/ai-advisor.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v4"/><path d="m9.5 14.5-3 3"/><path d="m14.5 14.5 3 3"/></svg>
             <div>
-              <h4 class="feature-item__title">24/7 AI Patient Communication</h4>
-              <p class="feature-item__desc">HealthV handles patient questions around the clock using their actual health data. Intelligent, personalized responses — not scripted deflection.</p>
+              <h4 class="feature-item__title">Unified Patient Record</h4>
+              <p class="feature-item__desc">Every provider on your care team sees the same data — labs, imaging, medications, wearable trends, visit notes. No more faxing records between offices.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/email.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
             <div>
-              <h4 class="feature-item__title">Morning Digest — Every Day</h4>
-              <p class="feature-item__desc">Every overnight patient message summarized, triaged, and waiting in your inbox each morning. Review in minutes. Respond with context.</p>
+              <h4 class="feature-item__title">Cross-Provider Coordination</h4>
+              <p class="feature-item__desc">When your cardiologist changes a medication, your PCP knows immediately. When your PT updates a recovery plan, your orthopedist sees it. No phone tag required.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/alert.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
             <div>
-              <h4 class="feature-item__title">Smart Escalation</h4>
-              <p class="feature-item__desc">Urgent concerns escalate immediately with full patient context attached. You get the alert AND the information at the same time — no callback needed.</p>
+              <h4 class="feature-item__title">Patient-Controlled Access</h4>
+              <p class="feature-item__desc">You decide which providers see which data. Grant access instantly, revoke it anytime. You control exactly who on your care team sees what.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/realtime-data.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
             <div>
-              <h4 class="feature-item__title">Patient Data Always Current</h4>
-              <p class="feature-item__desc">Wearables, recent labs, symptom logs — your patient's health picture updates continuously. Walk into every visit already informed.</p>
+              <h4 class="feature-item__title">Smart Notifications</h4>
+              <p class="feature-item__desc">Relevant providers get notified when new results, notes, or changes affect their area of care. No noise — only signal.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/hospital.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/><path d="m9 16 .348-.24c1.465-1.013 3.84-1.013 5.304 0L15 16"/><circle cx="12" cy="11" r="2"/></svg>
             <div>
-              <h4 class="feature-item__title">Any Specialty. Any Practice Size.</h4>
-              <p class="feature-item__desc">Concierge medicine, primary care, neurology, cardiology, longevity medicine. If you have patients who have questions, HealthV works for your practice.</p>
+              <h4 class="feature-item__title">Any Provider. Any Discipline.</h4>
+              <p class="feature-item__desc">Physicians, therapists, dietitians, trainers, mental health professionals. Anyone who contributes to your health belongs on your care team.</p>
             </div>
           </div>
           <div class="feature-item">
-            <img src="./images/icons/chat.png" alt="" class="feature-icon" width="56" height="56">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             <div>
-              <h4 class="feature-item__title">Replace Your Answering Service</h4>
-              <p class="feature-item__desc">Traditional medical answering services deliver generic, scripted responses. HealthV actually knows your patients and provides intelligent, personalized communication.</p>
+              <h4 class="feature-item__title">Family in the Loop</h4>
+              <p class="feature-item__desc">Caring for a parent or loved one? HealthV lets family members stay informed and coordinate with the care team — shared visibility into appointments, medications, and updates so nothing falls through the cracks.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <svg width="56" height="56" class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <div>
+              <h4 class="feature-item__title">Always Current</h4>
+              <p class="feature-item__desc">Wearable data, recent labs, symptom logs — your care team sees your health picture update in real time, not months-old records from a referral fax.</p>
             </div>
           </div>
         </div>
 
         <a href="#contact" class="btn-primary">Request a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: OPTIMIZATION -->
+<section class="section section--optimization" id="optimization">
+  <div class="container">
+    <h2 class="section__title reveal">Your AI Health Agent.<br>Always Learning. Always Watching.</h2>
+    <p class="section__subtitle reveal">HealthV doesn't just store your data. It continuously analyzes it — finding patterns, flagging changes, and giving you insights no single doctor visit could.</p>
+
+    <div class="optimization-grid">
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M20.8 7.2A10 10 0 0 0 12 2v10h10a10 10 0 0 0-1.2-4.8z"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Sleep Optimization</h3>
+        <p class="optimization-card__desc">Your Oura and Apple Watch data feed in nightly. The AI cross-references caffeine timing, exercise, and screen time to find what actually improves YOUR deep sleep — not generic advice.</p>
+      </div>
+
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16.5h10"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Lab Trend Interpreter</h3>
+        <p class="optimization-card__desc">Your fasting glucose went 92 to 97 to 103 over 18 months. You're not diabetic — but you're trending. HealthV tracks YOUR trajectory and tells you what changed.</p>
+      </div>
+
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Medication Side Effect Detective</h3>
+        <p class="optimization-card__desc">You start a new medication. HealthV monitors your HR, HRV, and sleep for changes. Two weeks in: "Your resting HR increased 8 bpm since starting lisinopril. Worth discussing."</p>
+      </div>
+
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Family Health Coordinator</h3>
+        <p class="optimization-card__desc">Managing your parent's care across 3 specialists who don't talk? HealthV flags medication interactions between providers and alerts you before the next appointment.</p>
+      </div>
+
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Pre-Visit Briefing</h3>
+        <p class="optimization-card__desc">Before your annual physical, HealthV generates a one-page summary: labs, wearable trends, medications, symptoms, and 3 questions worth asking. Make those 15 minutes count.</p>
+      </div>
+
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Supplement Correlator</h3>
+        <p class="optimization-card__desc">Are your supplements working? HealthV correlates intake with lab values and wearable data over months. "Your vitamin D went from 28 to 45 after 3 months of 4000 IU daily."</p>
+      </div>
+
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Recovery Tracker</h3>
+        <p class="optimization-card__desc">The AI tracks your HRV recovery curve after workouts. Over months it learns YOUR pattern: "You need 48h after heavy legs but 24h after upper body. Your program doesn't account for this."</p>
+      </div>
+
+      <div class="optimization-card reveal">
+        <div class="optimization-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/></svg>
+        </div>
+        <h3 class="optimization-card__title">Genetic Risk Fusion</h3>
+        <p class="optimization-card__desc">APOE4 variant from 23andMe? HealthV doesn't just tell you once — it continuously monitors your cardiovascular markers and cognitive patterns against that genetic backdrop.</p>
       </div>
     </div>
   </div>
@@ -573,24 +519,24 @@
       <!-- LEFT: Four Security Pillars -->
       <div class="security-grid reveal">
         <div class="security-card">
-          <img src="./images/icons/security.png" alt="" class="security-card__icon" width="48" height="48">
+          <svg class="security-card__icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
           <h4 class="security-card__title">HIPAA Compliant Infrastructure</h4>
           <p class="security-card__desc">Built on fully HIPAA-compliant cloud infrastructure. Every transaction encrypted, logged, and auditable.</p>
         </div>
         <div class="security-card">
-          <img src="./images/icons/ai-advisor.png" alt="" class="security-card__icon" width="48" height="48">
+          <svg class="security-card__icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
           <h4 class="security-card__title">Safe AI Processing</h4>
           <p class="security-card__desc">All AI processing runs within a HIPAA-compliant environment. Your health data never touches a non-compliant endpoint. Ever.</p>
         </div>
         <div class="security-card">
-          <img src="./images/icons/clipboard.png" alt="" class="security-card__icon" width="48" height="48">
+          <svg class="security-card__icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
           <h4 class="security-card__title">Patient-Permissioned Access</h4>
           <p class="security-card__desc">You control exactly who sees your data. Providers access only what you permit. Revoke access anytime. Your data is never sold. Period.</p>
         </div>
         <div class="security-card">
-          <img src="./images/icons/package.png" alt="" class="security-card__icon" width="48" height="48">
+          <svg class="security-card__icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
           <h4 class="security-card__title">Portable &amp; Yours Forever</h4>
-          <p class="security-card__desc">Cancel anytime and export every byte of your data. No lock-in. Health sovereignty means your data leaves when you do.</p>
+          <p class="security-card__desc">Cancel anytime and export every byte of your data. No lock-in. Your data leaves when you do.</p>
         </div>
 
         <!-- Trust Badges -->
@@ -672,21 +618,14 @@
 <section class="section section--contact" id="contact">
   <div class="container">
     <h2 class="section__title reveal">Get in Touch</h2>
-    <p class="section__subtitle reveal">Whether you're a patient interested in early access, a provider exploring a partnership, or an investor — we'd love to hear from you.</p>
+    <p class="section__subtitle reveal">Whether you're a patient ready to take control of your health, a provider exploring a partnership, or an investor — we'd love to hear from you.</p>
 
     <div class="contact-grid">
       <!-- For Patients -->
       <div class="contact-box reveal">
         <h3 class="contact-box__title">For Patients</h3>
-        <p class="contact-box__desc">Join our waitlist for early access to the HealthV platform.</p>
-        <form class="contact-form" id="patient-form">
-          <input type="email" class="contact-form__input" placeholder="Your email" required aria-label="Patient email">
-          <button type="submit" class="btn-primary btn-primary--full">Join Waitlist</button>
-        </form>
-        <div class="form-success" id="patient-form-success">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Thank you — we'll be in touch.
-        </div>
+        <p class="contact-box__desc">Start using HealthV today — upload labs, connect wearables, and talk to your AI health advisor.</p>
+        <a href="https://app.healthv.ai" class="btn-primary btn-primary--full" style="text-decoration:none; text-align:center; display:block;">Launch App</a>
       </div>
 
       <!-- For Providers -->
@@ -715,6 +654,7 @@
     <div class="footer__bottom">
       <p class="footer__copy">&copy; 2026 HealthV LLC</p>
       <a href="mailto:contact@healthv.ai" class="footer__email" target="_blank" rel="noopener noreferrer">contact@healthv.ai</a>
+      <a href="https://healthv.ai/privacy.html" class="footer__email" style="margin-left:1.5rem;">Privacy Policy & Terms</a>
     </div>
   </div>
 </footer>
