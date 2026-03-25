@@ -272,6 +272,23 @@
   height: 48px;
   object-fit: contain;
   flex-shrink: 0;
+  color: var(--teal);
+}
+
+/* How HealthV Works */
+.section--how-it-works {
+  padding: 0;
+  max-width: 100%;
+}
+
+.how-it-works-graphic {
+  width: 100%;
+}
+
+.how-it-works-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-card__label {
