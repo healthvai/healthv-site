@@ -275,20 +275,96 @@
   color: var(--teal);
 }
 
+/* Google Health Connect badge */
+.health-compat {
+  text-align: center;
+}
+
+.health-compat__inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  background: var(--surface-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full, 999px);
+  backdrop-filter: blur(8px);
+}
+
+.health-compat__text {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.health-compat__glogo {
+  flex-shrink: 0;
+}
+
 /* How HealthV Works */
 .section--how-it-works {
   padding: 0;
   max-width: 100%;
+  background: var(--bg-primary);
 }
 
 .how-it-works-graphic {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .how-it-works-img {
   width: 100%;
   height: auto;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Optimization Section */
+.optimization-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-3xl);
+}
+
+.optimization-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl, 16px);
+  padding: var(--space-xl);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
+}
+
+.optimization-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.optimization-card__icon {
+  width: 56px;
+  height: 56px;
+  background: var(--teal-light);
+  color: var(--teal);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.optimization-card__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: var(--space-sm);
+}
+
+.optimization-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-body);
+  line-height: 1.7;
 }
 
 .hero-card__label {
