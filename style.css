@@ -302,35 +302,37 @@
   flex-shrink: 0;
 }
 
-.health-compat__logos {
+/* === SCROLLING LOGO BANNER === */
+.logo-banner-wrap {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.logo-banner__track {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-xl);
-  flex-wrap: wrap;
+  gap: 60px;
+  width: max-content;
+  animation: scrollLogos 20s linear infinite;
 }
 
-.health-compat__logo-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
-}
-
-.health-compat__logo-item:hover {
-  opacity: 1;
-}
-
-.health-compat__logo-item img {
-  height: 22px;
+.logo-banner__img {
+  height: 26px;
   width: auto;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-.health-compat__logo-item span {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--text-body);
+.logo-banner__img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* How HealthV Works */
