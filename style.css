@@ -317,8 +317,18 @@
   animation: scrollLogos 20s linear infinite;
 }
 
+.logo-banner__label {
+  text-align: center;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-md);
+}
+
 .logo-banner__img {
-  height: 26px;
+  height: 40px;
   width: auto;
   opacity: 0.5;
   filter: grayscale(100%);
