@@ -330,14 +330,12 @@
 .logo-banner__img {
   height: 28px;
   width: auto;
-  opacity: 0.8;
-  filter: grayscale(100%) contrast(1.4);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
 }
 
 .logo-banner__img:hover {
   opacity: 1;
-  filter: grayscale(0%);
 }
 
 @keyframes scrollLogos {
