@@ -328,10 +328,10 @@
 }
 
 .logo-banner__img {
-  height: 40px;
+  height: 28px;
   width: auto;
-  opacity: 0.5;
-  filter: grayscale(100%);
+  opacity: 0.8;
+  filter: grayscale(100%) contrast(1.4);
   transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
