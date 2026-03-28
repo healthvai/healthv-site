@@ -2476,4 +2476,13 @@ a.nav__link.nav__link--login {
   .logo-banner__label {
     text-align: center;
   }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer__email {
+    margin-left: 0 !important;
+  }
 }
