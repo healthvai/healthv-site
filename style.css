@@ -2436,5 +2436,44 @@ a.nav__link.nav__link--login {
 @media (max-width: 767px) {
   .hero__inner-layout {
     grid-template-columns: 1fr !important;
+    margin: 0 auto !important;
+    padding: 0 var(--space-md) !important;
+  }
+
+  .hero__content {
+    text-align: center;
+  }
+
+  .hero__sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-tiles {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs);
+    overflow: hidden;
+  }
+
+  .hero-card {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.8rem;
+  }
+
+  .hero-card__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-card__label {
+    font-size: 0.75rem;
+  }
+
+  .logo-banner-wrap {
+    text-align: center;
+  }
+
+  .logo-banner__label {
+    text-align: center;
   }
 }
