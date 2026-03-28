@@ -12,10 +12,10 @@
   --text-muted: #64748B;
   --text-white: #FFFFFF;
 
-  --accent: #0891B2;
-  --accent-hover: #0E7490;
-  --accent-light: rgba(8, 145, 178, 0.1);
-  --accent-glow: rgba(8, 145, 178, 0.2);
+  --accent: #0D9488;
+  --accent-hover: #0F766E;
+  --accent-light: rgba(13, 148, 136, 0.1);
+  --accent-glow: rgba(13, 148, 136, 0.2);
 
   --teal: #0D9488;
   --teal-light: rgba(13, 148, 136, 0.1);
