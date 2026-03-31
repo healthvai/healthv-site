@@ -55,7 +55,7 @@
       <a href="#vitality" class="nav__link">Vitality</a>
       <a href="#for-patients" class="nav__link">For Patients</a>
       <a href="#optimization" class="nav__link">Optimization</a>
-      <a href="https://app.healthv.ai" class="nav__link" style="background:#0d9488;color:#fff;padding:0.4rem 1.2rem;border-radius:8px;font-weight:600;">Launch App</a>
+      <a href="https://app.healthv.ai" id="launch-btn" class="nav__link" style="background:#0d9488;color:#fff;padding:0.4rem 1.2rem;border-radius:8px;font-weight:600;">Launch App</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -149,8 +149,8 @@
 
       <div class="vitality-card reveal">
         <svg width="48" height="48" class="vitality-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <h3 class="vitality-card__title">Morning Briefing via Telegram</h3>
-        <p class="vitality-card__desc">At 6 AM, your AI health assistant sends a personalized morning briefing to Telegram — your Vitality Score, sleep quality breakdown, step count, and insights. It knows your health history, your goals, and your data.</p>
+        <h3 class="vitality-card__title">Morning Briefing</h3>
+        <p class="vitality-card__desc">At 6 AM, your AI health assistant sends a personalized morning briefing via WhatsApp or Telegram — your Vitality Score, sleep quality breakdown, step count, and insights. It knows your health history, your goals, and your data.</p>
       </div>
 
       <div class="vitality-card reveal">
@@ -456,21 +456,11 @@
 <!-- SECTION 5: CONTACT -->
 <section class="section section--contact" id="contact">
   <div class="container">
-    <h2 class="section__title reveal">Get in Touch</h2>
-    <p class="section__subtitle reveal">Whether you're a patient ready to take control of your health, a provider exploring a partnership, or an investor — we'd love to hear from you.</p>
+    <h2 class="section__title reveal">For Providers &amp; Partners</h2>
+    <p class="section__subtitle reveal">Interested in bringing HealthV to your practice or organization? Let's talk.</p>
 
-    <div class="contact-grid">
-      <!-- For Patients -->
+    <div style="max-width:540px; margin:0 auto;">
       <div class="contact-box reveal">
-        <h3 class="contact-box__title">For Patients</h3>
-        <p class="contact-box__desc">Start using HealthV today — upload labs, connect wearables, and talk to your AI health advisor.</p>
-        <a href="https://app.healthv.ai" class="btn-primary btn-primary--full" style="text-decoration:none; text-align:center; display:block;">Launch App</a>
-      </div>
-
-      <!-- For Providers -->
-      <div class="contact-box reveal">
-        <h3 class="contact-box__title">For Providers &amp; Partners</h3>
-        <p class="contact-box__desc">Interested in bringing HealthV to your practice? Let's talk.</p>
         <form class="contact-form" id="provider-form">
           <input type="text" class="contact-form__input" placeholder="Name" required aria-label="Name">
           <input type="email" class="contact-form__input" placeholder="Email" required aria-label="Provider email">

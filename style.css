@@ -150,6 +150,9 @@
   width: 100%;
 }
 
+#launch-btn::after { display: none !important; }
+#launch-btn:hover { color: #fff; opacity: 0.9; }
+
 /* Mobile hamburger */
 .nav-toggle {
   display: none;
