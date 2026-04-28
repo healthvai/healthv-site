@@ -1,9 +1,9 @@
-/* === UNIFIED PAGE BACKGROUND — flat color matching the iframe's left-edge midtone === */
+/* === UNIFIED PAGE BACKGROUND — matches the iframe's interior (slate-950) === */
 html, body {
-  background: #081d30 !important;
+  background: #020618 !important;
 }
 body {
-  background: #081d30 !important;
+  background: #020618 !important;
 }
 /* Kill all per-section background images and overlay frames */
 .hero,
@@ -42,8 +42,9 @@ body {
 .header-v2 .wordmark {
   display: inline-flex;
   align-items: center;
-  line-height: 1;
-  font-size: 1.35rem;
+  line-height: 1.6;
+  padding: 8px 0;
+  font-size: 1.85rem;
   font-weight: 800;
   letter-spacing: -0.015em;
 }
@@ -102,10 +103,16 @@ html, body {
 
 /* === HEADER v2 — nav + Launch App === */
 .header-v2 {
-  background: rgba(4, 16, 26, 0.82);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border);
+  background: #020618 !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+.header-v2.scrolled {
+  background: #020618 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
 }
 
 .nav-v2 {
