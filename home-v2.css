@@ -44,7 +44,7 @@
   100% { stroke-dashoffset: 0; }
 }
 @media (max-width: 640px) {
-  .section-divider { height: 60px; }
+  .section-divider:not(.section-divider--top) { height: 60px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .section-divider .ecg-pulse {
