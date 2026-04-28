@@ -1,3 +1,59 @@
+/* === SECTION DIVIDER — animated ECG pulse === */
+.section-divider {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.section-divider--top {
+  position: absolute;
+  top: 80px; /* sits right below the fixed header */
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 4;
+}
+.section-divider svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.section-divider .ecg-base {
+  fill: none;
+  stroke: rgba(45, 212, 191, 0.18);
+  stroke-width: 1;
+}
+.section-divider .ecg-pulse {
+  fill: none;
+  stroke: #2DD4BF;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 4px rgba(45, 212, 191, 0.65)) drop-shadow(0 0 10px rgba(45, 212, 191, 0.35));
+  stroke-dasharray: 200 1200;
+  stroke-dashoffset: 1400;
+  animation: ecg-sweep 4.5s linear infinite;
+}
+@keyframes ecg-sweep {
+  0%   { stroke-dashoffset: 1400; }
+  100% { stroke-dashoffset: 0; }
+}
+@media (max-width: 640px) {
+  .section-divider { height: 60px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-divider .ecg-pulse {
+    animation: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    opacity: 0.55;
+  }
+}
+
 /* === UNIFIED PAGE BACKGROUND — matches the iframe's interior (slate-950) === */
 html, body {
   background: #020618 !important;
@@ -175,9 +231,9 @@ html, body {
   position: relative;
   width: 100%;
   height: calc(100vh - 80px);
-  min-height: 720px;
+  min-height: 780px;
   padding-left: 0;
-  padding-top: 80px;
+  padding-top: 140px;
 }
 .hero-v2 .dashprev-iframe {
   width: 100%;
