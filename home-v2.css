@@ -226,12 +226,10 @@ html, body {
   min-height: 800px;
   height: 86vh;
   max-height: 1000px;
-  border: 1px solid rgba(94, 234, 212, 0.12);
-  border-radius: 18px;
-  background: #04101A;
-  box-shadow:
-    0 40px 80px -25px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(94, 234, 212, 0.06) inset;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   overflow: hidden;
   display: block;
 }
