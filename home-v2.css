@@ -1,6 +1,39 @@
+/* === GLOBAL DARK THEME OVERRIDES === */
+:root {
+  --bg-primary: #04101A;
+  --bg-soft: #061625;
+  --bg-alt: #0B2942;
+  --surface-card: #0F172A;
+  --surface-glass: rgba(15, 23, 42, 0.72);
+
+  --text-heading: #F8FAFC;
+  --text-body: #CBD5E1;
+  --text-muted: #94A3B8;
+
+  --border: rgba(148, 163, 184, 0.10);
+  --border-strong: rgba(148, 163, 184, 0.18);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 40px rgba(13, 148, 136, 0.22);
+}
+html, body {
+  background: var(--bg-primary);
+  color: var(--text-body);
+}
+.section, .section--vitality, .section--patients, .section--optimization, .section--security, .section--what {
+  background: transparent !important;
+}
+.section__title { color: var(--text-heading); }
+.section__subtitle { color: var(--text-muted); }
+.wordmark { color: var(--text-heading); }
+.footer { background: var(--bg-soft); border-top: 1px solid var(--border); }
+.footer__copy, .footer__email { color: var(--text-muted); }
+
 /* === HEADER v2 — nav + Launch App === */
 .header-v2 {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(4, 16, 26, 0.82);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
@@ -14,14 +47,14 @@
 .nav-v2__link {
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--text-body);
+  color: #CBD5E1;
   text-decoration: none;
   letter-spacing: 0.005em;
   transition: color 0.15s ease;
   position: relative;
 }
-.nav-v2__link:hover { color: var(--accent); }
-.nav-v2__link.active { color: var(--accent); }
+.nav-v2__link:hover { color: #5EEAD4; }
+.nav-v2__link.active { color: #5EEAD4; }
 .nav-v2__link.active::after {
   content: '';
   position: absolute;
@@ -55,16 +88,17 @@
 /* === HERO v2: split (1/3 hero + 2/3 dashboard) === */
 .hero-v2 {
   position: relative;
-  padding: 7rem 0 4rem;
-  background: linear-gradient(180deg, #F4F7FB 0%, #FFFFFF 70%);
+  padding: 6.5rem 0 4rem;
+  background: radial-gradient(ellipse at 20% 30%, rgba(13, 148, 136, 0.12) 0%, transparent 55%),
+              linear-gradient(180deg, #04101A 0%, #061625 100%);
   overflow: hidden;
 }
 
 /* Override the 1200px container constraint for the hero so the dashboard iframe
    has enough room to render the app at its full desktop layout. */
 .hero-v2 > .container {
-  max-width: 1680px;
-  padding: 0 var(--space-xl);
+  max-width: 1920px;
+  padding: 0 1.5rem;
 }
 
 .hero-v2 .hero__bg-grid {
@@ -81,8 +115,8 @@
 
 .hero-v2__grid {
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: var(--space-xl);
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: var(--space-lg);
   align-items: stretch;
   position: relative;
   z-index: 1;
@@ -98,20 +132,19 @@
 
 .hero-v2__headline {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.4rem);
+  font-size: clamp(1.7rem, 1.2rem + 1.4vw, 2.4rem);
   font-weight: 800;
   letter-spacing: -0.025em;
-  line-height: 1.04;
-  color: var(--text-heading);
-  margin: 0 0 1.1rem;
+  line-height: 1.05;
+  color: #F8FAFC;
+  margin: 0 0 1rem;
 }
 
 .hero-v2__sub {
-  font-size: clamp(0.95rem, 0.85rem + 0.3vw, 1.075rem);
+  font-size: 0.95rem;
   line-height: 1.55;
-  color: var(--text-body);
-  max-width: 36ch;
-  margin: 0 0 1.8rem;
+  color: #CBD5E1;
+  margin: 0 0 1.6rem;
 }
 
 .hero-v2__cta {
@@ -136,18 +169,18 @@
 }
 
 .hero-v2__integrations {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
 }
 .hero-v2__integrations-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.85rem;
+  color: #94A3B8;
+  margin-bottom: 0.7rem;
 }
 .hero-v2__integrations-row {
   display: flex;
@@ -190,27 +223,27 @@
 
 .dashprev-iframe {
   width: 100%;
-  min-height: 760px;
-  height: 820px;
-  max-height: 90vh;
+  min-height: 800px;
+  height: 86vh;
+  max-height: 1000px;
   border: 1px solid rgba(94, 234, 212, 0.12);
-  border-radius: 22px;
+  border-radius: 18px;
   background: #04101A;
   box-shadow:
-    0 40px 80px -25px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(94, 234, 212, 0.05) inset;
+    0 40px 80px -25px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(94, 234, 212, 0.06) inset;
   overflow: hidden;
   display: block;
 }
 
 @media (max-width: 1100px) {
-  .hero-v2__grid { grid-template-columns: 280px minmax(0, 1fr); }
+  .hero-v2__grid { grid-template-columns: 220px minmax(0, 1fr); gap: 1rem; }
 }
 @media (max-width: 980px) {
   .dashprev-iframe { min-height: 640px; height: 720px; }
 }
 @media (max-width: 640px) {
-  .dashprev-iframe { min-height: 540px; height: 580px; border-radius: 18px; }
+  .dashprev-iframe { min-height: 540px; height: 580px; border-radius: 14px; }
 }
 
 .dashprev {
@@ -574,17 +607,29 @@
 .lab-dot--amber { background: #F59E0B; box-shadow: 0 0 6px rgba(245, 158, 11, 0.7); }
 
 /* === RESPONSIVE === */
-@media (max-width: 980px) {
-  .hero-v2 { padding: 6rem 0 3rem; }
+/* Stack hero above iframe on anything narrower than full desktop, so iframe gets
+   full viewport width and the React app inside renders desktop layout. */
+@media (max-width: 1280px) {
   .hero-v2__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    gap: 1.5rem;
   }
   .hero-v2__pane--hero {
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem 2rem;
     padding: 0;
   }
-  .hero-v2__sub { max-width: 50ch; }
+  .hero-v2__headline { margin: 0; flex: 1 1 auto; }
+  .hero-v2__sub { display: none; }
+  .hero-v2__cta { align-self: center; }
+  .hero-v2__integrations { margin-top: 0.6rem; padding-top: 0.6rem; flex: 1 1 100%; border-top: 0; }
+}
+@media (max-width: 980px) {
+  .hero-v2 { padding: 6rem 0 3rem; }
   .nav-v2 { gap: 1.1rem; }
 }
 
