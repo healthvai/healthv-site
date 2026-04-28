@@ -10,8 +10,11 @@
 .section-divider--top {
   position: absolute;
   top: 80px; /* sits right below the fixed header */
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--content-max);
   height: 110px; /* taller so the QRS spike + glow doesn't clip */
   z-index: 4;
   overflow: visible; /* let the pulse glow bleed past the strip */
@@ -87,8 +90,10 @@ body {
 /* === HEADER FIX: wordmark left, nav right-aligned, vertically centered === */
 .header-v2 .header__inner,
 .header-v2 > .container {
-  max-width: 100% !important;
+  max-width: var(--content-max) !important;
   width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: clamp(1.5rem, 3vw, 3rem) !important;
   padding-right: clamp(1.5rem, 3vw, 3rem) !important;
   display: flex !important;
@@ -144,6 +149,11 @@ body {
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
   --shadow-glow: 0 0 40px rgba(13, 148, 136, 0.22);
+
+  /* Unified content max-width — header, hero/iframe, dividers, and
+     marketing sections all center within this. The page #020618 background
+     fills the side margins on screens wider than this. */
+  --content-max: 1440px;
 }
 html, body {
   background: var(--bg-primary);
@@ -151,6 +161,17 @@ html, body {
 }
 .section, .section--vitality, .section--patients, .section--optimization, .section--security, .section--what {
   background: transparent !important;
+}
+
+/* Center marketing-section content + the inter-section dividers at the same
+   max-width as the hero so the whole page reads as one centered column. */
+.section .container {
+  max-width: var(--content-max);
+}
+.section-divider:not(.section-divider--top) {
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
 }
 .section__title { color: var(--text-heading); }
 .section__subtitle { color: var(--text-muted); }
@@ -260,10 +281,11 @@ html, body {
   background: transparent;
 }
 
-/* Override the 1200px container constraint for the hero so the dashboard iframe
-   has enough room to render the app at its full desktop layout. */
+/* Cap the hero/iframe container at the unified content width so on wide
+   screens the dashboard sits centered rather than full-bleed. */
 .hero-v2 > .container {
-  max-width: 1920px;
+  max-width: var(--content-max);
+  margin: 0 auto;
   padding: 0 1.5rem;
 }
 
