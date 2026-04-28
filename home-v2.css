@@ -248,10 +248,13 @@ html, body {
   background: transparent;
 }
 
-/* Full-bleed iframe — no left reserve since hero is gone */
+/* Centered iframe at the unified content max-width — no longer full-bleed */
 .hero-v2 .hero-v2__pane--dashboard {
   position: relative;
   width: 100%;
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
   height: calc(100vh - 80px);
   min-height: 780px;
   padding-left: 0;
@@ -281,8 +284,10 @@ html, body {
   background: transparent;
 }
 
-/* Cap the hero/iframe container at the unified content width so on wide
-   screens the dashboard sits centered rather than full-bleed. */
+/* (Legacy: .hero-v2 > .container no longer exists in the markup since the
+   design pass moved to a direct .hero-v2__pane--dashboard child. The cap
+   now lives on .hero-v2__pane--dashboard above. Keeping a no-op rule
+   reserves the selector in case the markup is restored.) */
 .hero-v2 > .container {
   max-width: var(--content-max);
   margin: 0 auto;
