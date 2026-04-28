@@ -176,9 +176,31 @@
   filter: grayscale(0.4);
 }
 
-/* === DASHBOARD PREVIEW — mirrors live app dashboard === */
+/* === DASHBOARD PREVIEW — live app via iframe === */
 .hero-v2__pane--dashboard {
   display: flex;
+}
+
+.dashprev-iframe {
+  width: 100%;
+  min-height: 620px;
+  height: 720px;
+  max-height: 80vh;
+  border: 1px solid rgba(94, 234, 212, 0.12);
+  border-radius: 22px;
+  background: #04101A;
+  box-shadow:
+    0 40px 80px -25px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(94, 234, 212, 0.05) inset;
+  overflow: hidden;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .dashprev-iframe { min-height: 540px; height: 600px; }
+}
+@media (max-width: 640px) {
+  .dashprev-iframe { min-height: 480px; height: 520px; border-radius: 18px; }
 }
 
 .dashprev {

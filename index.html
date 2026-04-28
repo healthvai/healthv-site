@@ -96,8 +96,19 @@
       </div>
     </aside>
 
-    <!-- RIGHT: Dashboard preview (2/3) — mirrors live app dashboard -->
-    <div class="hero-v2__pane hero-v2__pane--dashboard" aria-label="Dashboard preview">
+    <!-- RIGHT: Live app dashboard via iframe -->
+    <div class="hero-v2__pane hero-v2__pane--dashboard" aria-label="Live app dashboard">
+      <iframe
+        src="https://app.healthv.ai/?demo=1"
+        class="dashprev-iframe"
+        loading="lazy"
+        title="HealthV.ai dashboard"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- LEGACY: hand-built dashboard preview (kept for reference, hidden via display:none) -->
+    <div class="hero-v2__pane hero-v2__pane--dashboard" aria-hidden="true" style="display:none;">
       <div class="dashprev">
         <!-- subtle starfield -->
         <div class="dashprev__stars" aria-hidden="true"></div>
