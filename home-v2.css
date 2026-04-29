@@ -284,6 +284,23 @@ html, body {
   background: transparent;
 }
 
+/* Mobile (≤900px): tighten the hero so the dashboard appears just below the
+   header. The desktop padding (140px) leaves a huge dead band on phones. */
+@media (max-width: 900px) {
+  .hero-v2 .hero-v2__pane--dashboard {
+    min-height: 0;
+    padding-top: 90px; /* compact mobile header */
+  }
+  .hero-v2 .dashprev-iframe {
+    min-height: 640px;
+  }
+  /* Hide the top EKG strip on mobile — it doesn't fit cleanly in the narrow
+     viewport and adds visual clutter above the dashboard. */
+  .section-divider--top {
+    display: none;
+  }
+}
+
 /* Hero text overlay — absolute, top-left, sits to the left of the iframe */
 .hero-v2 .hero-v2__pane--hero {
   position: absolute;
