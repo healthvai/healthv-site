@@ -255,14 +255,14 @@ html, body {
   max-width: var(--content-max);
   margin-left: auto;
   margin-right: auto;
-  min-height: 740px;
+  min-height: 780px;
   padding-left: 0;
-  padding-top: 140px; /* 80px header + 60px divider strip */
+  padding-top: 100px; /* 80px header + a touch of breathing room (top EKG strip overlays the iframe top edge) */
 }
 .hero-v2 .dashprev-iframe {
   width: 100%;
   height: 100%;
-  min-height: 660px; /* dashboard panel 460 + Health To-Dos ~200 */
+  min-height: 700px; /* dashboard panel 460 + Health To-Dos ~240 (3 rows) */
   border: 0;
   display: block;
   background: transparent;
