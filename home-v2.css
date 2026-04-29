@@ -15,9 +15,9 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: var(--content-max);
-  height: 110px; /* taller so the QRS spike + glow doesn't clip */
+  height: 60px; /* compact strip; overflow:visible lets the glow breathe */
   z-index: 4;
-  overflow: visible; /* let the pulse glow bleed past the strip */
+  overflow: visible;
 }
 .section-divider svg {
   position: absolute;
@@ -258,7 +258,7 @@ html, body {
   height: calc(100vh - 80px);
   min-height: 780px;
   padding-left: 0;
-  padding-top: 190px; /* 80px header + 110px divider strip */
+  padding-top: 140px; /* 80px header + 60px divider strip */
 }
 .hero-v2 .dashprev-iframe {
   width: 100%;

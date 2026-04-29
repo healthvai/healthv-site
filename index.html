@@ -43,7 +43,7 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="./home-v2.css?v=5">
+<link rel="stylesheet" href="./home-v2.css?v=6">
 </head>
 <body>
 
@@ -68,14 +68,14 @@
 <!-- HERO + DASHBOARD PREVIEW (v2) -->
 <section class="hero-v2" id="home">
 
-    <!-- ECG pulse divider above the dashboard. Spike centered at x=600 of the
-         1200 viewBox so the QRS complex lands directly above the humanoid in
-         the dashboard iframe below. ViewBox is taller (110) so the peak/trough
-         + drop-shadow glow have room to breathe without clipping. -->
+    <!-- ECG pulse divider above the dashboard. Compact 60-tall strip; the
+         spike's QRS complex is centered at x=600 of the 1200 viewBox so it
+         lands directly above the humanoid in the iframe. overflow:visible on
+         the strip lets the glow bleed past the 60px box without clipping. -->
     <div class="section-divider section-divider--top" aria-hidden="true">
-      <svg viewBox="0 0 1200 110" preserveAspectRatio="none">
-        <path class="ecg-base" d="M0 55 H1200" />
-        <path class="ecg-pulse" d="M0 55 H570 L582 55 L590 49 L595 25 L600 90 L605 25 L612 55 L625 55 H1200" />
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path class="ecg-base" d="M0 30 H1200" />
+        <path class="ecg-pulse" d="M0 30 H580 L592 30 L597 26 L600 12 L603 48 L606 26 L611 30 L620 30 H1200" />
       </svg>
     </div>
 
