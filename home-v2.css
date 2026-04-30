@@ -299,14 +299,29 @@ html, body {
     padding-top: 100px; /* fixed mobile header (~92px) + 8px breathing room */
     padding-bottom: 0;
   }
+  /* Cap the iframe to (viewport - header - breathing room) so it fits in
+     the visible mobile viewport instead of growing tall enough that the
+     labs band at its bottom edge slides off-screen. svh accounts for
+     the mobile browser's URL bar at its smallest. */
   .hero-v2 .dashprev-iframe {
-    min-height: 640px;
+    min-height: 0;
+    height: calc(100svh - 110px);
+    max-height: calc(100svh - 110px);
   }
   /* Hide the top EKG strip on mobile — it doesn't fit cleanly in the narrow
      viewport and adds visual clutter above the dashboard. */
   .section-divider--top {
     display: none;
   }
+}
+/* Older fallback rules below set iframe height: 720px / 580px which would
+   override the @media (max-width: 900px) cap above; reset them on those
+   widths so our svh-based clamp wins. */
+@media (max-width: 980px) {
+  .dashprev-iframe { height: calc(100svh - 110px) !important; min-height: 0 !important; }
+}
+@media (max-width: 640px) {
+  .dashprev-iframe { height: calc(100svh - 110px) !important; min-height: 0 !important; }
 }
 
 /* Hero text overlay — absolute, top-left, sits to the left of the iframe */
