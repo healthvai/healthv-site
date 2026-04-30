@@ -860,7 +860,10 @@ html, body {
   .hero-v2__integrations { margin-top: 0.6rem; padding-top: 0.6rem; flex: 1 1 100%; border-top: 0; }
 }
 @media (max-width: 980px) {
-  .hero-v2 { padding: 6rem 0 3rem; }
+  /* No top/bottom padding here — the .hero-v2__pane--dashboard padding-top
+     reserves space for the fixed header (see ≤900px rule above). Adding
+     padding here stacks an extra ~80px of dead space above the iframe. */
+  .hero-v2 { padding: 0; }
   .nav-v2 { gap: 1.1rem; }
 }
 
@@ -909,7 +912,8 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  .hero-v2 { padding: 5rem 0 2.5rem; }
+  /* No top/bottom padding — the dashboard pane handles header clearance. */
+  .hero-v2 { padding: 0; }
   .hero-v2__headline { font-size: clamp(1.85rem, 1.4rem + 2vw, 2.5rem); }
   .hero-v2__cta { width: 100%; justify-content: center; padding: 1rem 1.6rem; }
   .dashprev { padding: 1.1rem; border-radius: 18px; }
