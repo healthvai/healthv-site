@@ -888,7 +888,8 @@ html, body {
 }
 
 @media (max-width: 760px) {
-  /* Hide inline nav on mobile — keep hamburger visible (base.css handles it) */
+  /* Hide inline nav on mobile — keep hamburger visible (base.css handles it).
+     Dark-theme drawer to match the rest of the site (was white). */
   .nav-v2 {
     position: absolute;
     top: 100%;
@@ -898,9 +899,9 @@ html, body {
     align-items: flex-start;
     gap: 0.4rem;
     padding: 1rem var(--space-lg);
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(2, 6, 24, 0.98);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
     transform: translateY(-12px);
     opacity: 0;
     pointer-events: none;
@@ -911,7 +912,13 @@ html, body {
     opacity: 1;
     pointer-events: auto;
   }
-  .nav-v2__link { font-size: 1rem; padding: 0.4rem 0; width: 100%; }
+  .nav-v2__link {
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    width: 100%;
+    color: #CBD5E1; /* slate-300 — readable on dark drawer */
+  }
+  .nav-v2__link:hover { color: #5EEAD4; }
   .btn-launch-pill {
     width: 100%;
     justify-content: center;
