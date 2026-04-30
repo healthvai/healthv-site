@@ -285,11 +285,19 @@ html, body {
 }
 
 /* Mobile (≤900px): tighten the hero so the dashboard appears just below the
-   header. The desktop padding (140px) leaves a huge dead band on phones. */
+   header. The desktop padding (140px) leaves a huge dead band on phones.
+   The hero-v2 itself also gets a desktop-default `padding: 6rem 0 3rem`
+   from the ≤980px rule below, which stacked with this pane's padding-top
+   added ~78px of empty space above the iframe. Zero out the section
+   padding so the iframe begins right under the fixed mobile header. */
 @media (max-width: 900px) {
+  .hero-v2 {
+    padding: 0;
+  }
   .hero-v2 .hero-v2__pane--dashboard {
     min-height: 0;
-    padding-top: 90px; /* compact mobile header */
+    padding-top: 100px; /* fixed mobile header (~92px) + 8px breathing room */
+    padding-bottom: 0;
   }
   .hero-v2 .dashprev-iframe {
     min-height: 640px;
