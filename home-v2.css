@@ -126,6 +126,19 @@ body {
   margin-top: 4px;
   margin-left: 2px;
 }
+.header-v2 .wordmark__version {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 5px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 4px;
+  vertical-align: 1px;
+  text-transform: lowercase;
+}
 .header-v2 .wordmark .v {
   color: var(--accent);
 }
