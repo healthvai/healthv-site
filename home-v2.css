@@ -117,17 +117,19 @@ body {
   align-items: center;
   line-height: 1;
 }
+/* Tagline sits under HealthV.ai. Tightened tracking + auto-fit font-size
+   so "VITALITY SIMPLIFIED V<n>" never extends past the wordmark's right
+   edge regardless of viewport. */
 .header-v2 .wordmark__tagline {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 600;
   color: var(--accent);
-  letter-spacing: 0.22em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-top: 4px;
   margin-left: 2px;
+  white-space: nowrap;
 }
-/* Version reads inline at the end of the tagline — same teal/uppercase
-   tracking, but bold so the version is visually distinct from the tagline. */
 .header-v2 .wordmark__version {
   margin-left: 6px;
   font-weight: 800;
