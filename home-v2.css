@@ -126,17 +126,11 @@ body {
   margin-top: 4px;
   margin-left: 2px;
 }
-/* Version sits on its OWN line under "Vitality Simplified", inheriting the
-   tagline's teal/uppercase/tracking — three-line stack: name → tagline → version. */
+/* Version reads inline at the end of the tagline — same teal/uppercase
+   tracking, but bold so the version is visually distinct from the tagline. */
 .header-v2 .wordmark__version {
-  display: block;
-  font-size: 0.6rem;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-top: 2px;
-  margin-left: 2px;
+  margin-left: 6px;
+  font-weight: 800;
 }
 .header-v2 .wordmark .v {
   color: var(--accent);
